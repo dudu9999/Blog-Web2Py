@@ -1,0 +1,389 @@
+(dp1
+S'output'
+p2
+S'missing "pass" in view'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'response.write(\'<!DOCTYPE html>\\n<html lang="en">\\n\\n<head>\\n\\n  <meta charset="utf-8">\\n  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\\n  <meta name="description" content="">\\n  <meta name="author" content="">\\n\\n  <title>Blog - Web2py</title>\\n\\n  <link href="\', escape=False)\nresponse.write(URL(\'static\',\'css/bootstrap.min.css\'))\nresponse.write(\'"  rel="stylesheet">\\n\\n  <link href=\\\'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic\\\' rel=\\\'stylesheet\\\' type=\\\'text/css\\\'>\\n\\n  <link href="\', escape=False)\nresponse.write(URL(\'static\',\'css/all.min.css\'))\nresponse.write(\'" rel="stylesheet" type="text/css">\\n  \\n  <link href="\', escape=False)\nresponse.write(URL(\'static\',\'css/main.css\'))\nresponse.write(\'" rel="stylesheet">\\n</head>\\n\\n<body>\\n\\n  <!-- Navigation -->\\n  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">\\n    <div class="container">\\n      <a class="navbar-brand" href="\', escape=False)\nresponse.write(URL(\'default\',\'index\'))\nresponse.write(\'">BLOG</a>\\n      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">\\n        Menu\\n        <i class="fas fa-bars"></i>\\n      </button>\\n      <div class="collapse navbar-collapse" id="navbarResponsive">\\n        <ul class="navbar-nav ml-auto">\\n          <li class="nav-item">\\n            <a class="nav-link" href="index.html">Home</a>\\n          </li>\\n          <li class="nav-item">\\n            <a class="nav-link" href="about.html">About</a>\\n          </li>\\n          <li class="nav-item">\\n            <a class="nav-link" href="post.html">Sample Post</a>\\n          </li>\\n          <li class="nav-item">\\n            <a class="nav-link" href="contact.html">Contact</a>\\n          </li>\\n        </ul>\\n      </div>\\n    </div>\\n  </nav>\\n\\n  <!-- Page Header -->\\n  <header class="masthead" style="background-image: url(\\\'\', escape=False)\nresponse.write(URL(\'static\',\'img/home-bg.jpg\'))\nresponse.write(\'\\\')">\\n    <div class="overlay"></div>\\n    <div class="container">\\n      <div class="row">\\n        <div class="col-lg-8 col-md-10 mx-auto">\\n          <div class="site-heading">\\n            <h1>Blog com web2py</h1>\\n            <span class="subheading">Um Blog Criado com a linguagem python criado com o framework web2py </span>\\n          </div>\\n        </div>\\n      </div>\\n    </div>\\n  </header>\\n\\n  <!-- Main Content -->\\n <!--  <div class="container">\\n    <div class="row">\\n      <div class="col-lg-8 col-md-10 mx-auto">\\n        <div class="post-preview">\\n          <a href="post.html">\\n            <h2 class="post-title">\\n              Man must explore, and this is exploration at its greatest\\n            </h2>\\n            <h3 class="post-subtitle">\\n              Problems look mighty small from 150 miles up\\n            </h3>\\n          </a>\\n          <p class="post-meta">Posted by\\n            <a href="#">Eduardo Caetano</a>\\n            on September 24, 2019</p>\\n        </div>\\n        <hr>  --> \\n        \', escape=False)\nresponse.write(\'\\r\\n\', escape=False)\nfor post in posts:\n    response.write(\'\\r\\n<<!-- div class="container">\\r\\n\\t<h1>\', escape=False)\n    response.write(post.titulo)\n    response.write(\'</h1>\\r\\n\\t<span>Publica\\xc3\\xa7\\xc3\\xa3o: \', escape=False)\n    response.write(post.criado_em)\n    response.write(\'</span>\\r\\n\\t<div class="thumbnail">\\r\\n\\t\\t\', escape=False)\n    response.write(IMG(_src=URL(\'default\',\'download\',args=post.imagem),_width="700px",_height="200px"))\n    response.write(\'\\r\\n\\t</div>\\r\\n\\t<div class="media-body">\\r\\n\\t\\t<p>\', escape=False)\n    response.write(post.postagem)\n    response.write(\'</p>\\r\\n\\t</div>\\r\\n\\t<div class="coments"></div>\\r\\n</div> -->\', escape=False)\n    response.write(\' \\n\\n        <!-- Pager -->\\n        <!-- <div class="clearfix">\\n          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>\\n        </div>\\n      </div>\\n    </div>\\n  </div>\\n\\n  <hr> -->\\n\\n  <!-- Footer -->\\n  <footer>\\n    <div class="container">\\n      <div class="row">\\n        <div class="col-lg-8 col-md-10 mx-auto">\\n          <ul class="list-inline text-center">\\n            <li class="list-inline-item">\\n              <a href="#">\\n                <span class="fa-stack fa-lg">\\n                  <i class="fas fa-circle fa-stack-2x"></i>\\n                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>\\n                </span>\\n              </a>\\n            </li>\\n            <li class="list-inline-item">\\n              <a href="#">\\n                <span class="fa-stack fa-lg">\\n                  <i class="fas fa-circle fa-stack-2x"></i>\\n                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>\\n                </span>\\n              </a>\\n            </li>\\n            <li class="list-inline-item">\\n              <a href="#">\\n                <span class="fa-stack fa-lg">\\n                  <i class="fas fa-circle fa-stack-2x"></i>\\n                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>\\n                </span>\\n              </a>\\n            </li>\\n          </ul>\\n          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>\\n        </div>\\n      </div>\\n    </div>\\n  </footer>\\n\\n  <!-- Bootstrap core JavaScript -->\\n  <script src="\', escape=False)\n    response.write(URL(\'static\',\'/js/jquery.js\'))\n    response.write(\'"></script>\\n\\n  <script src="\', escape=False)\n    response.write(URL(\'static\',\'js/bootstrap.bundle.min.js\'))\n    response.write(\'"></script>\\n\\n  <!-- Custom scripts for this template -->\\n  <script src="\', escape=False)\n    response.write(URL(\'static\',\'js/main.js\'))\n    response.write(\'"></script>\\n</body>\\n\\n</html>\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__module__'
+p12
+S"'gluon.rocket'"
+p13
+sS'__getslice__'
+p14
+S"<method-wrapper '__getslice__' of SocketTimeout object>"
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of SocketTimeout object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of SocketTimeout object>'
+p19
+sS'__dict__'
+p20
+S'{}'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of SocketTimeout object>'
+p23
+sS'__weakref__'
+p24
+S'None'
+p25
+sS'message'
+p26
+S"'Socket timed out before request.'"
+p27
+sS'__init__'
+p28
+S"<method-wrapper '__init__' of SocketTimeout object>"
+p29
+sS'__setattr__'
+p30
+S"<method-wrapper '__setattr__' of SocketTimeout object>"
+p31
+sS'__reduce_ex__'
+p32
+S'<built-in method __reduce_ex__ of SocketTimeout object>'
+p33
+sS'__new__'
+p34
+S'<built-in method __new__ of type object>'
+p35
+sS'__format__'
+p36
+S'<built-in method __format__ of SocketTimeout object>'
+p37
+sS'__class__'
+p38
+S"<class 'gluon.rocket.SocketTimeout'>"
+p39
+sS'__doc__'
+p40
+S"'Exception for when a socket times out between requests.'"
+p41
+sS'__getitem__'
+p42
+S"<method-wrapper '__getitem__' of SocketTimeout object>"
+p43
+sS'__setstate__'
+p44
+S'<built-in method __setstate__ of SocketTimeout object>'
+p45
+sS'__getattribute__'
+p46
+S"<method-wrapper '__getattribute__' of SocketTimeout object>"
+p47
+sS'args'
+p48
+S"('Socket timed out before request.',)"
+p49
+sS'__subclasshook__'
+p50
+S'<built-in method __subclasshook__ of type object>'
+p51
+sS'__unicode__'
+p52
+S'<built-in method __unicode__ of SocketTimeout object>'
+p53
+sS'__delattr__'
+p54
+S"<method-wrapper '__delattr__' of SocketTimeout object>"
+p55
+sS'__repr__'
+p56
+S"<method-wrapper '__repr__' of SocketTimeout object>"
+p57
+sS'__hash__'
+p58
+S"<method-wrapper '__hash__' of SocketTimeout object>"
+p59
+ssS'evalue'
+p60
+S'Socket timed out before request.'
+p61
+sS'frames'
+p62
+(lp63
+(dp64
+S'file'
+p65
+S'C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\gluon\\rocket.py'
+p66
+sS'dump'
+p67
+(dp68
+S'self'
+p69
+S'<WSGIWorker(Thread-9, started daemon 1972)>'
+p70
+sS'conn'
+p71
+S'<gluon.rocket.Connection object>'
+p72
+sS'self.run_app'
+p73
+S'<bound method WSGIWorker.run_app of <WSGIWorker(Thread-9, started daemon 1972)>>'
+p74
+ssS'lnum'
+p75
+I1288
+sS'lines'
+p76
+(dp77
+I1283
+S'            # Enter connection serve loop'
+p78
+sI1284
+S'            while True:'
+p79
+sI1285
+S'                if __debug__:'
+p80
+sI1286
+S"                    self.err_log.debug('Serving a request')"
+p81
+sI1287
+S'                try:'
+p82
+sI1288
+S'                    self.run_app(conn)'
+p83
+sI1289
+S'                except:'
+p84
+sI1290
+S'                    exc = sys.exc_info()'
+p85
+sI1291
+S'                    handled = self._handleError(*exc)'
+p86
+sI1292
+S'                    if handled:'
+p87
+ssS'call'
+p88
+S'(self=<WSGIWorker(Thread-9, started daemon 1972)>)'
+p89
+sS'func'
+p90
+S'run'
+p91
+sa(dp92
+g65
+S'C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\gluon\\rocket.py'
+p93
+sg67
+(dp94
+S'self'
+p95
+S'<WSGIWorker(Thread-9, started daemon 1972)>'
+p96
+sS'self.environ'
+p97
+S"{'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;...e/apng,*/*;q=0.8,application/signed-exchange;v=b3', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_ACCEPT_LANGUAGE': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7', 'HTTP_CACHE_CONTROL': 'max-age=0', 'HTTP_CONNECTION': 'keep-alive', 'HTTP_COOKIE': 'session_id_welcome=127.0.0.1-8900cf2b-f8bf-4cfa-...og=127.0.0.1-bfaf8e3a-09da-4980-84e0-dab2ea9da828', 'HTTP_DNT': '1', 'HTTP_HOST': '127.0.0.1:8000', 'HTTP_REFERER': 'http://127.0.0.1:8000/Blog/default/posts', 'HTTP_UPGRADE_INSECURE_REQUESTS': '1', ...}"
+p98
+sS'sock_file'
+p99
+S'<socket._fileobject object>'
+p100
+sS'environ'
+p101
+S'undefined'
+p102
+sS'self.build_environ'
+p103
+S'<bound method WSGIWorker.build_environ of <WSGIWorker(Thread-9, started daemon 1972)>>'
+p104
+sS'conn'
+p105
+S'<gluon.rocket.Connection object>'
+p106
+ssg75
+I1781
+sg76
+(dp107
+I1776
+S'        else:'
+p108
+sI1777
+S'            sock_file = conn.makefile(BUF_SIZE)'
+p109
+sI1778
+S''
+sI1779
+S'        try:'
+p110
+sI1780
+S'            # Read the headers and build our WSGI environment'
+p111
+sI1781
+S'            self.environ = environ = self.build_environ(sock_file, conn)'
+p112
+sI1782
+S''
+sI1783
+S'            # Handle 100 Continue'
+p113
+sI1784
+S"            if environ.get('HTTP_EXPECT', '') == '100-continue':"
+p114
+sI1785
+S"                res = environ['SERVER_PROTOCOL'] + ' 100 Continue\\r\\n\\r\\n'"
+p115
+ssg88
+S'(self=<WSGIWorker(Thread-9, started daemon 1972)>, conn=<gluon.rocket.Connection object>)'
+p116
+sg90
+S'run_app'
+p117
+sa(dp118
+g65
+S'C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\gluon\\rocket.py'
+p119
+sg67
+(dp120
+S'sock_file'
+p121
+S'<socket._fileobject object>'
+p122
+sS'self.read_request_line'
+p123
+S'<bound method WSGIWorker.read_request_line of <WSGIWorker(Thread-9, started daemon 1972)>>'
+p124
+sS'self'
+p125
+S'<WSGIWorker(Thread-9, started daemon 1972)>'
+p126
+sS'request'
+p127
+g102
+ssg75
+I1601
+sg76
+(dp128
+I1600
+S'        # Grab the request line'
+p129
+sI1601
+S'        request = self.read_request_line(sock_file)'
+p130
+sI1602
+S''
+sI1603
+S'        # Copy the Base Environment'
+p131
+sI1604
+S'        environ = self.base_environ.copy()'
+p132
+sI1605
+S''
+sI1596
+S'                                      "wsgiorg.futures": executor.futures})'
+p133
+sI1597
+S''
+sI1598
+S'    def build_environ(self, sock_file, conn):'
+p134
+sI1599
+S'        """ Build the execution environment. """'
+p135
+ssg88
+S'(self=<WSGIWorker(Thread-9, started daemon 1972)>, sock_file=<socket._fileobject object>, conn=<gluon.rocket.Connection object>)'
+p136
+sg90
+S'build_environ'
+p137
+sa(dp138
+g65
+S'C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\gluon\\rocket.py'
+p139
+sg67
+(dp140
+S'global SocketTimeout'
+p141
+S"<class 'gluon.rocket.SocketTimeout'>"
+p142
+ssg75
+I1352
+sg76
+(dp143
+I1347
+S''
+sI1348
+S'                d = sock_file.readline()'
+p144
+sI1349
+S'                if PY3K:'
+p145
+sI1350
+S"                    d = d.decode('ISO-8859-1')"
+p146
+sI1351
+S'        except socket.timeout:'
+p147
+sI1352
+S"            raise SocketTimeout('Socket timed out before request.')"
+p148
+sI1353
+S'        except TypeError:'
+p149
+sI1354
+S'            raise SocketClosed('
+p150
+sI1355
+S"                'SSL bug caused closure of socket.  See '"
+p151
+sI1356
+S'                \'"https://groups.google.com/d/topic/web2py/P_Gw0JxWzCs".\')'
+p152
+ssg88
+S'(self=<WSGIWorker(Thread-9, started daemon 1972)>, sock_file=<socket._fileobject object>)'
+p153
+sg90
+S'read_request_line'
+p154
+sasS'pyver'
+p155
+S'Python 2.7.9: C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\web2py.exe (prefix: )'
+p156
+sS'etype'
+p157
+S"<class 'gluon.rocket.SocketTimeout'>"
+p158
+sS'date'
+p159
+S'Thu Jun 27 01:20:30 2019'
+p160
+sS'locals'
+p161
+(dp162
+S'sock_file'
+p163
+S'<socket._fileobject object>'
+p164
+sS'self'
+p165
+S'<WSGIWorker(Thread-9, started daemon 1972)>'
+p166
+sssS'traceback'
+p167
+S'Traceback (most recent call last):\n  File "C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\gluon\\rocket.py", line 1288, in run\n    self.run_app(conn)\n  File "C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\gluon\\rocket.py", line 1781, in run_app\n    self.environ = environ = self.build_environ(sock_file, conn)\n  File "C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\gluon\\rocket.py", line 1601, in build_environ\n    request = self.read_request_line(sock_file)\n  File "C:\\Users\\ecaet\\Documents\\Programa\xe7\xe3o\\Web2py\\web2py_win\\web2py\\gluon\\rocket.py", line 1352, in read_request_line\n    raise SocketTimeout(\'Socket timed out before request.\')\nSocketTimeout: Socket timed out before request.\n'
+p168
+s.

@@ -1,0 +1,21 @@
+{{extend 'base.html'}}
+
+<div class="container">
+	<h1>{{=post.titulo}}</h1>
+	<span>Publicação: {{=post.criado_em.strftime("%d-%m-%Y %H:%M")}}</span>
+	<div class="thumbnail">
+		{{=IMG(_src=URL('default','download',args=post.imagem),_width="500px",_height="400px")}}
+	</div>
+	<div class="media-body">
+		<p>{{=post.postagem}}</p>
+	</div>
+	<h3>Comentarios</h3>
+	<div class="coments">		
+		{{for c in comments:}}
+		<hr>
+			<h4>{{="%(first_name)s  %(last_name)s" % c.author}} <strong>in </strong>{{=c.criado_em.strftime("%d-%m-%Y %H:%M")}}	</h4>		
+			<p>{{=c.comentario}}</p>	
+			<hr>		
+		{{pass}}			
+	</div>
+</div>
